@@ -9,6 +9,8 @@ BACKUP_TARGET="/home/$USER/backup"
 #function init {...}
 init () {
     echo "Creating backup directory" && mkdir $BACKUP_TARGET 2> /dev/null || echo "Directory already exists"
+    echo "" > $LOGFILE
+    local CLOUDGURU=37
 }
 
 tail () {
@@ -16,7 +18,7 @@ tail () {
 }
 
 init 
-echo "Copying Files" && cp -v $BACKUP_LOC $BACKUP_TARGER > $LOGFILE 2>&1
+echo "Copying Files" && cp -v $BACKUP_LOC $BACKUP_TARGER >> $LOGFILE 2>&1
 
 grep -i denied $LOGFILE | tail 2
 
