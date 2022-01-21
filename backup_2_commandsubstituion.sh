@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Backing up required files
+# Command Substitution
 
 LOGFILE=$1
 BACKUP_LOC="/usr/bin/*"
