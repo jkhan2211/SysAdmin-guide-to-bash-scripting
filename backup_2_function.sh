@@ -16,9 +16,15 @@ init () {
 tail () {
     command tail -n $1
 }
+cleanup () {
+    rm -rf $BACKUP_TARGET
+    echo "RECIEVED CTRLC" >> /home/$USER/$LOGFILE
+}
 
-init 
-echo "Copying Files" && cp -v $BACKUP_LOC $BACKUP_TARGET >> $LOGFILE 2>&1
+init
+trap cleanup SIGINT
+
+#echo "Copying Files" && cp -v $BACKUP_LOC $BACKUP_TARGET >> $LOGFILE 2>&1
 
 echo "Copying Files"
 cd $BACKUP_LOC
