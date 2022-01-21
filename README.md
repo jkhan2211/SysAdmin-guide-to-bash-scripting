@@ -1,3 +1,3 @@
 ﻿# SysAdmin-guide-to-bash-scripting
 
-## AcloudGuru course on BashS cripting
+AcloudGuru course on Bash Scripting
