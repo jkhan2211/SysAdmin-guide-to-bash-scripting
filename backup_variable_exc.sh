@@ -9,9 +9,9 @@
 #Task3: Run the script in each user's home directory to ensure it works 
 
 MYLOGS=$1
-echo "Creating backup directory" >> /home/$USER/$MYLOGS
+echo "Creating backup directory" >> /home/$USER/$MYLOG
 mkdir /home/$USER/work_backup
 
-echo "Copying files" >> /home/$USER/$MYLOGS
-cp -v /home/$USER/work/* /home/$USER/work_backup >> /home/$USER/$MYLOGS
-echo "Finished Copying Files" >> /home/$USER/$MYLOGS
+echo "Copying files" >> /home/$USER/$MYLOG
+cp -v /home/$USER/work/* /home/$USER/work_backup >> /home/$USER/$MYLOG
+echo "Finished Copying Files" >> /home/$USER/$MYLOG
